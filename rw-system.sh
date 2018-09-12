@@ -161,3 +161,5 @@ fi
 if busybox_phh unzip -p /vendor/app/ims/ims.apk classes.dex |grep -qF -e Landroid/telephony/ims/feature/MmTelFeature -e Landroid/telephony/ims/feature/MMTelFeature;then
     mount -o bind /system/phh/empty /vendor/app/ims/ims.apk
 fi
+
+mount -o bind /vendor/lost+found /vendor/etc/audio || true
